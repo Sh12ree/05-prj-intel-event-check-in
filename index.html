@@ -1,69 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Intel Sustainability Summit</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intel Sustainability Summit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>intel</h1>
+        <h2>TEAM SUSTAINABILITY SUMMIT</h2>
+        <p>Check-in system for sustainability event attendees</p>
+      </header>
 
-  <div class="container">
+      <!-- Attendance -->
+      <div class="stats">
+        <p>Attendance: <span id="attendanceCount">0</span> / 50</p>
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+      </div>
 
-    <header class="header">
-      <h1>intel</h1>
-      <h2>TEAM SUSTAINABILITY SUMMIT</h2>
-      <p>Check-in system for sustainability event attendees</p>
-    </header>
+      <!-- Greeting -->
+      <div id="greeting" class="greeting">Welcome!</div>
 
-    <!-- Attendance -->
-    <div class="stats">
-      <p>Attendance: <span id="attendanceCount">0</span> / 50</p>
-      <div class="progress">
-        <div id="progressBar"></div>
+      <!-- Check-in Form -->
+      <div class="form">
+        <input type="text" id="nameInput" placeholder="Enter name..." />
+
+        <select id="teamSelect">
+          <option value="">Select Team...</option>
+          <option value="Team Water Wise">Team Water Wise</option>
+          <option value="Team Net Zero">Team Net Zero</option>
+          <option value="Team Renewables">Team Renewables</option>
+        </select>
+
+        <button id="checkInBtn">Check In</button>
+      </div>
+
+      <!-- Team Stats -->
+      <div class="teams">
+        <div class="team-box water">
+          <h3>Team Water Wise</h3>
+          <p id="waterWiseCount">0</p>
+        </div>
+
+        <div class="team-box netzero">
+          <h3>Team Net Zero</h3>
+          <p id="netZeroCount">0</p>
+        </div>
+
+        <div class="team-box renew">
+          <h3>Team Renewables</h3>
+          <p id="renewablesCount">0</p>
+        </div>
       </div>
     </div>
 
-    <!-- Greeting -->
-    <div id="greeting" class="greeting">
-      Welcome!
-    </div>
-
-    <!-- Check-in Form -->
-    <div class="form">
-      <input type="text" id="nameInput" placeholder="Enter name..." />
-
-      <select id="teamSelect">
-        <option value="">Select Team...</option>
-        <option value="Team Water Wise">Team Water Wise</option>
-        <option value="Team Net Zero">Team Net Zero</option>
-        <option value="Team Renewables">Team Renewables</option>
-      </select>
-
-      <button id="checkInBtn">Check In</button>
-    </div>
-
-    <!-- Team Stats -->
-    <div class="teams">
-      <div class="team-box water">
-        <h3>Team Water Wise</h3>
-        <p id="waterWiseCount">0</p>
-      </div>
-
-      <div class="team-box netzero">
-        <h3>Team Net Zero</h3>
-        <p id="netZeroCount">0</p>
-      </div>
-
-      <div class="team-box renew">
-        <h3>Team Renewables</h3>
-        <p id="renewablesCount">0</p>
-      </div>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
